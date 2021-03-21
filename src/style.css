@@ -1,0 +1,34 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    font-size: 0.7rem;
+}
+
+
+#logo {
+    width: 200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.a-center {
+    align-items: center;
+}
+
+.padding {
+    padding: 1rem;
+}

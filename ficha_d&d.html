@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de D&D</title>
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app" class="padding flex column a-center">
+        <div class="flex column">
+            <img id="logo" src="src/ded_logo.png" alt="logo do d&d">
+            <p>Nome do Jogador</p>
+            <input type="text" v-model="character.player">
+            <p>Nome do Personagem</p>
+            <input type="text" v-model="character.name">
+            <p>Experiência e Nível</p>
+            <div class="flex">
+                <input type="number" v-model="character.xp">
+                <input type="number" v-model="character.level" style="width: 2rem;">
+            </div>
+            <p>Raça</p>
+            <input type="text" v-model="character.race">
+            <p>Classes</p>
+            <div class="flex">
+                <input type="text" v-model="character.classes[0].name">
+                <input type="number" v-model="character.classes[0].level" style="width: 2rem;">
+            </div>
+            <p>Antecedente</p>
+            <input type="text" v-model="character.background">
+            <p>Alinhamento</p>
+            <input type="text" v-model="character.alignment">
+                <p>Outras Informações</p>
+                    <p>traços de personalidade</p>
+                    <textarea name="" id="" cols="30" rows="10" v-model="character.personality"></textarea>
+                    <p>ideais</p>
+                    <textarea name="" id="" cols="30" rows="10" v-model="character.ideals"></textarea>
+                    <p>vínculos</p>
+                    <textarea name="" id="" cols="30" rows="10"  v-model="character.bonds"></textarea>
+                    <p>fraquezas</p>
+                    <textarea name="" id="" cols="30" rows="10"  v-model="character.flaws"></textarea>
+                
+        </div>
+        <a :href="encoded" :download="character.name + '.json'">Salvar</a>
+        <p>2021 - Criado por Walter Melo - <a href="https://github.com/walmello24">https://github.com/walmello24</a></p>
+    </div>
+    <script src="src/vuecomponents.js"></script>
+    <script src="src/vueconfig.js"></script>
+</body>
+</html>
